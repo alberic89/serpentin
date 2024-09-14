@@ -1,0 +1,15 @@
+nom de classe: PTSI XIII
+
+classe:
+    - Bob
+    - Alice
+    - Marcel
+    - Jean
+    - Pierre
+    - Anne
+
+nom de salle: ND 007
+
+salle:
+    - [2, 1, 2]
+    - [1, 2, 0]
