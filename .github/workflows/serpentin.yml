@@ -47,7 +47,7 @@ jobs:
           export LC_ALL="fr_FR.UTF-8"
           export LC_CTYPE="fr_FR.UTF-8"
           sudo dpkg-reconfigure locales
-          pip3 install -U pillow slugify tabulate
+          pip3 install -U pillow slugify tabulate unicode
           python3 serpentin.py
           mv *.png serpentin.png
           
