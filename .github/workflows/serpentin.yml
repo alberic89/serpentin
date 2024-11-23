@@ -49,12 +49,13 @@ jobs:
           sudo dpkg-reconfigure locales
           pip3 install -U pillow tabulate python-slugify
           python3 serpentin.py
-          mv *.png serpentin.png
+          mkdir github_page
+          mv *.png github_page/serpentin.png
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'serpentin.png'
+          path: 'github_page'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
