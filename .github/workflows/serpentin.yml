@@ -41,7 +41,7 @@ jobs:
           check-latest: true
       - name: Build
         run: |
-          echo ${{ secret.classe }} > classe.yaml
+          echo ${{ secrets.CLASSE }} > classe.yaml
           python3 serpentin.py
           mv *.png serpentin.png
           
