@@ -57,7 +57,7 @@ jobs:
           pip3 install python-slugify pillow
           python3 serpentin.py
           mkdir github_page
-          mogrify -resize 50% -monochrome -quality 100 *.png
+          mogrify -resize 80% -monochrome -quality 100 *.png
           mv *.png github_page/serpentin.png
           
       - name: Upload artifact
