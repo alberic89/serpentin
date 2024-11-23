@@ -42,7 +42,6 @@ jobs:
           encoding: base64
       - name: Build
         run: |
-          sudo apt update
           sudo apt-get install language-pack-fr
           export LC_ALL="fr_FR.UTF-8"
           export LC_CTYPE="fr_FR.UTF-8"
