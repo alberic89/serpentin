@@ -122,7 +122,7 @@ def create_serpentin_img(serpentine, classe_name, salle_name, file_name):
 
     usr_font = ImageFont.truetype("DejaVuSansMono.ttf", 15)
 
-    image = Image.new("1", (1, 1), (255, 255, 255))
+    image = Image.new("1", (1, 1), 1)
 
     d_usr = ImageDraw.Draw(image)
 
@@ -132,7 +132,7 @@ def create_serpentin_img(serpentine, classe_name, salle_name, file_name):
 
     d_usr = ImageDraw.Draw(image)
 
-    d_usr = d_usr.multiline_text((7, 7), text_serpentin, (0, 0, 0), font=usr_font)
+    d_usr = d_usr.multiline_text((7, 7), text_serpentin, 0, font=usr_font)
     image.save(file_name + ".png", option='optimize')
 
 
