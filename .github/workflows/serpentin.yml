@@ -38,7 +38,7 @@ jobs:
       - name: Cache apt dependencies
         uses: awalsh128/cache-apt-pkgs-action@v1.4.2
         with:
-          packages: language-pack-fr imagemagick
+          packages: language-pack-fr
       - name: Remove unused YAML
         run: rm *.yaml
       - name: Get input file
@@ -57,7 +57,6 @@ jobs:
           pip3 install python-slugify pillow
           python3 serpentin.py
           mkdir github_page
-          mogrify -monochrome -quality 80 *.png
           mv *.png github_page/serpentin.png
           
       - name: Upload artifact
