@@ -15,7 +15,7 @@ from datetime import datetime
 from tabulate import tabulate as tb
 
 
-locale.setlocale(locale.LC_TIME, "FR_fr")
+locale.setlocale(locale.LC_TIME, "fr_FR.UTF-8")
 
 new_tabulate = False
 try:  # check if tabulate new fmt (after 0.9) is avaible
