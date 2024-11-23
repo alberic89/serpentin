@@ -42,10 +42,7 @@ jobs:
           encoding: base64
       - name: Build
         run: |
-          export LC_ALL="FR_fr"
-          export LC_CTYPE="FR_fr"
-          sudo apt update
-          sudo dpkg-reconfigure locales
+          export LC_ALL=C
           pip3 install -U pillow slugify tabulate
           python3 serpentin.py
           mv *.png serpentin.png
