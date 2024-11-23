@@ -44,8 +44,8 @@ jobs:
         run: |
           sudo apt update
           sudo apt-get install language-pack-fr
-          export LC_ALL="FR_fr"
-          export LC_CTYPE="FR_fr"
+          export LC_ALL="FR_fr.UTF-8"
+          export LC_CTYPE="FR_fr.UTF-8"
           sudo dpkg-reconfigure locales
           pip3 install -U pillow slugify tabulate
           python3 serpentin.py
