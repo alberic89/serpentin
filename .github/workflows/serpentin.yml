@@ -42,7 +42,10 @@ jobs:
           encoding: base64
       - name: Build
         run: |
-          pip3 install -U pillow slugify tabulate 
+          export LC_ALL="FR_fr"
+          export LC_CTYPE="FR_fr"
+          sudo dpkg-reconfigure locales
+          pip3 install -U pillow slugify tabulate
           python3 serpentin.py
           mv *.png serpentin.png
           
