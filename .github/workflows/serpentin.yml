@@ -34,7 +34,7 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Remove unused YAML
         run: rm *.yaml
-      - uses: joutvhu/write-file@v1
+      - uses: joutvhu/write-file@v1.0.2
         with:
           path: classe.yaml
           contents: ${{ secrets.CLASSE }}
@@ -42,6 +42,7 @@ jobs:
           encoding: base64
       - name: Build
         run: |
+          pip install pillow
           python3 serpentin.py
           mv *.png serpentin.png
           
