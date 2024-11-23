@@ -42,7 +42,7 @@ jobs:
           encoding: base64
       - name: Build
         run: |
-          pip install pillow
+          pip3 install -U pillow slugify tabulate 
           python3 serpentin.py
           mv *.png serpentin.png
           
