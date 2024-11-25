@@ -42,7 +42,7 @@ def get_all_yaml():
     return yaml_serpentins
 
 
-def serpentin(classe, salle, rangs_aveugles):
+def serpentin(classe, salle, rangs_aveugles, master_seed):
     """!!! Le paramètre classe va être effacé !!!"""
 
     if len(salle) < rangs_aveugles:
@@ -52,7 +52,7 @@ def serpentin(classe, salle, rangs_aveugles):
 
     now = time.localtime()
 
-    seed = now[2] * 10000 + now[1] * 100 + now[0]
+    seed = (now[2] * 10000 + now[1] * 100 + now[0]) * master_seed
 
     random.seed(seed)
 
@@ -147,7 +147,7 @@ def main():
             + datetime.today().strftime("%d-%m-%Y")
         )
         create_serpentin_img(
-            serpentin(serpent["classe"], serpent["salle"], serpent["rangs_aveugles"]),
+            serpentin(serpent["classe"], serpent["salle"], serpent["rangs_aveugles"], serpent["seed"]),
             serpent["nom de classe"],
             serpent["nom de salle"],
             file_name,
