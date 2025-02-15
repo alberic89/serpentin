@@ -60,7 +60,7 @@ jobs:
           mv *.png github_page/serpentin.png
           
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@latest
+        uses: actions/upload-pages-artifact@main
         with:
           path: 'github_page'
       - name: Deploy to GitHub Pages
